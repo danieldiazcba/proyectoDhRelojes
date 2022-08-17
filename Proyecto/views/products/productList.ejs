@@ -1,0 +1,55 @@
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+
+        <div class="container">
+            <div class="prod-width">
+
+            <div>
+                <h2 class="prodlist-txt">Todos los productos</h2>
+
+                <% if (locals.isLogged && locals.userLogged.idRoleFK==1) { %>
+                    <a href="/products/create">
+                        <button>Crear producto</button>
+                    </a>
+                <% } %>
+                
+                <!-- <button class="all-button" category="all">all</button>
+                    <% categorias.forEach(categoria => { %>
+                        <button class="button-category" category='<%= categoria.idCategory %>' value="<%= categoria.idCategory %>">
+                            <%= categoria.name %>
+                    <% }); %> -->
+            </div>
+
+            <div class="products-container">
+
+            <% for (let i = 0; i < producto.length; i++) { %>
+
+                <section class="product">
+                    
+                    <a href="/products/<%=producto[i].idProduct %>" category="producto[i].idCategoryFK" class="ref-link">
+                    <div class="box-image">
+                 
+                        <img src="/images/products/<%= imagen[i].name %>" alt="Foto Reloj" class="img-pl">
+                    
+                    </div>
+                    <article>
+                        <p class="product-name"><%= producto[i].name %></p>
+                        <p class="product-price">$<%= producto[i].price %></p>
+                        <!-- <p class=""><%= producto[i].description %></p> -->
+                    </article>
+                    </a>
+                </section>
+
+            <% } %>
+            </div>
+        </div>
+        </div>
+
+    </main>
+    
+    <%- include('../partials/footer.ejs') %>
+    <script src="/js/listado-js.js"></script>
+</body>
+</html>

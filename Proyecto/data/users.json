@@ -1,0 +1,54 @@
+[
+ {
+  "name": "Lio",
+  "lastName": "Messi",
+  "mail": "messi@gmail.com",
+  "dni": 123123123,
+  "address": "falsa 1234",
+  "password": "$2a$10$e2/aqIu/tZDpoJCZUoVYquqkerdDmoOwpMx/PcSlNenDVpuqmdfuy",
+  "id": 1,
+  "image": "image-1655857672138.png"
+ },
+ {
+  "name": "lll",
+  "lastName": "www",
+  "mail": "ww@gmail.com",
+  "dni": 1234,
+  "address": "4444",
+  "password": "$2a$10$/xbsEz3GdlnGIALATzI2rej0rIp6VVdQHhxEpc.PkFJhC6nPmq4Hu",
+  "id": 2,
+  "image": "image-1655857871588.png"
+ },
+ {
+  "name": "Carlos",
+  "lastName": "Perez",
+  "mail": "carlos23@gmail.com",
+  "dni": 123123123,
+  "address": "asdasd",
+  "password": "$2a$10$1eLTx0eV7IcvfeDvgRkKCO/cY9A27R9HGKVxZ0YUNJX/xS2M52XKq",
+  "id": 3,
+  "image": "default-image.png"
+ },
+ {
+  "name": "Juan",
+  "lastName": "Perez",
+  "mail": "juanperez@hotmail.com",
+  "dni": 12345678,
+  "address": "falsa 123 ",
+  "password": "$2a$10$IOfc0V6QHR0iS8yrEgj2euJvCLyxpzYiJyUGlAbDO2B/UjZQyWrES",
+  "user": "guest",
+  "id": 4,
+  "image": "image-1655940826311.jpeg"
+ },
+ {
+  "name": "prueba",
+  "lastName": "prueba",
+  "mail": "prueba@gmail.com",
+  "dni": 12345678,
+  "address": "prueba123",
+  "password": "$2a$10$G0OnVoYw52PEB1SU.pk6F.Q3BA/z4SyjwikY/hiqJ.fNJulmRSaMu",
+  "user": "guest",
+  "id": 5,
+  "image": "image-1657554689079.jpg"
+ }
+]

@@ -1,0 +1,19 @@
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <div class="contenedorProfile">
+        <div class="divCardProfile">
+            <img src="/images/users/<%= user.image %>" alt="profile picture" class="profile-pic">
+            <p class="welcome-text"> Bienvenido <%= user.name %></p>
+            <div>
+                <a href="/users/edit/<%= user.idUser %>"><input type='button' name="edit" id="editProfile" class="logoutProfile" value="Editar perfil"></a>
+            </div>
+            <div>
+                <a href="/users/logout"><input type='button' name="logout" id="logoutProfile" class="logoutProfile" value="Cerrar sesion"></a>
+            </div>
+        </div>
+    
+    </div>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main class="main-register">
+
+        <section class="section-register">
+            <h2 class="profile-txt">Editar perfil</h2>
+
+            <!-- <img src="/images/users/<%= user.image %>" alt="profile picture" class="profile-pic-edit"> -->
+
+            <div class="img-upload">
+                <img src="/images/users/<%= user.image %>" alt="profile picture">
+                <div class="round">
+                  <input class="inputfile" type="file">
+                  <i class = "fa-solid fa-plus"></i>
+                </div>
+            </div>
+
+            <br>
+            <form class="width-registro" action="/users/edit/<%= promesaUsuario.idUser %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <!-- NOMBRE -->
+                <div>
+                    <p class="desc-ep">Nombre:</p>
+                    <input class="inputBusqueda-editprof" type="text"  name="name" id="name" value="<%= promesaUsuario.name %>" >
+                </div>
+                
+                <!-- <div>
+                    <p class="desc-pl">Nombre:</p>
+                    <input 
+                    type="text"
+                    class="inputBusqueda-profile"
+                    placeholder="<%= promesaUsuario.name %>"
+                    name="name"
+                    id="name"></div> -->
+
+                <!-- APELLIDO -->
+                <div>
+                    <p class="desc-ep">Apellido:</p>
+                    <input class="inputBusqueda-editprof" type="text"  name="name" id="name" value="<%= promesaUsuario.lastName %>" >
+                </div>
+
+                <!-- <div><input
+                    type="text"
+                    class="inputBusqueda-profile"
+                    placeholder="<%= promesaUsuario.lastName %>"
+                    name="lastName"
+                    id="lastName"></div> -->
+
+                <!-- MAIL -->
+                <div>
+                    <p class="desc-ep">Mail:</p>
+                    <input class="inputBusqueda-editprof" type="text"  name="name" id="name" value="<%= promesaUsuario.mail %>" >
+                </div>
+
+                <!-- <div><input
+                    type="email"
+                    class="inputBusqueda-profile"
+                    placeholder="<%= promesaUsuario.mail%>"
+                    name="mail"
+                    id="mail"></div> -->
+
+                <!-- DNI -->
+                <div>
+                    <p class="desc-ep">Dni:</p>
+                    <input class="inputBusqueda-editprof" type="text"  name="name" id="name" value="<%= promesaUsuario.dni %>" >
+                </div>
+
+
+                <!-- <div><input
+                    type="number"
+                    class="inputBusqueda-profile"
+                    placeholder="<%= promesaUsuario.dni %>"
+                    name="dni"
+                    id="dni"></div> -->
+
+                <!-- DIRECCION -->
+                <div>
+                    <p class="desc-ep">Direccion:</p>
+                    <input class="inputBusqueda-editprof" type="text"  name="name" id="name" value="<%= promesaUsuario.address %>" >
+                </div>
+
+
+                <!-- <div><input
+                    type="text"
+                    class="inputBusqueda-profile"
+                    placeholder="<%= promesaUsuario.address %>"
+                    name="address"
+                    id="address"></div> -->
+
+                 <!-- CONTRASEÑA
+                 <div><input
+                    type="password"
+                    class="inputBusqueda-profile <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                    placeholder=""
+                    name="password"
+                    id="password"
+                    value="<%= locals.oldData ? oldData.password : null %>"></div>
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="text-danger">
+                            <%= errors.password.msg %>
+                        </div>
+                    <% } %>
+                    <p id="errores-password"></p>
+                 IMAGEN
+                 <div class="inputBusqueda-input">
+                    <input class="input-profile <%= locals.errors && errors.image ? 'is-invalid' : null %>" type="file" class="inputBusqueda" placeholder="image" name="image" id=" ">
+                        <img src="/images/users/<%= promesaUsuario.image %>" alt="">
+                    </input>
+                </div>
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="text-danger">
+                            <%= errors.image.msg %>
+                        </div>
+                    <% } %> -->
+                
+                <div><input type="submit" value="Enviar" class="send-btn-register" id="boton"></div>
+            </form>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+
+</body>
+</html>
